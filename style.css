@@ -1,0 +1,205 @@
+*{
+ padding: 0px;
+ margin: 0px;
+ transition: all ease-in-out 0.4s;   
+}
+body a{
+    text-decoration: none;
+    color: black;
+}
+.top-section{
+    background-color: white;
+    height: 8vh;
+    box-shadow: 0 1px 2px 2px grey;
+    position: relative;
+}
+.top-section h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.top-section .cart-icon{
+    display: flex;
+    width: 28px;
+
+}
+
+nav{
+    display: flex;
+    position: absolute;
+    height: 91vh;
+    background-color: beige;
+    width: 40vw;
+    justify-content: center;
+    align-items: center;
+    left: -80vw;
+    z-index: 98;
+    box-shadow: 1px 0 5px 0 grey;
+}
+.cover{
+    background-color: black;
+    height: 91vh;
+    width: 100vw;
+    display: none;
+    opacity: 30%;
+    position: absolute;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li{
+    text-align: center;
+    margin: 10px;
+    font-size: x-large;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+}
+.nav-separator{
+    border-top: 1px rounded grey;
+    width: 35vw;
+    margin: 5px;
+}
+.toggle{
+    position: absolute ;
+    z-index: 99;
+    width: 30px;
+    margin: 10px;
+    height: 35px;
+
+}
+.active{
+    left: 0vw;
+    display: flex;
+}
+.card {
+    background-color: white;
+    width: 10vw;
+    padding: 3px;
+    text-align: center;
+    margin: 6.5px;
+    box-shadow: 3px 2px 3px 1px;
+}
+.product-img {
+    width: 8vw;
+    padding: 6px;
+    height: 12vh;
+}
+p.product-name {
+    margin: 3px;
+}
+button.add {
+    padding: 4px;
+    margin: 3px;
+}
+.container {
+    display: flex;
+    height: 92vh;
+}
+.content-kiri{
+    display: flex;
+    flex-wrap: wrap;
+}
+.kiri {
+    padding: 5px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.kanan {
+    padding: 5px;
+    width: 30%;
+    display: flex;
+    box-shadow: -3px 0px 2px 1px; 
+}
+.kanan-atas{
+    height: 70vh;
+    overflow: scroll;
+}
+.checkout-table{
+    width: 29vw;
+    border-collapse: collapse;
+}
+th, td{
+    border-bottom: 1px solid grey;
+    text-align: center;
+}
+button.add {
+    color: white;
+    background: black;
+    border-radius: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+button.add a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.trash{
+    color: black;
+    width: 20px;
+}
+.checkout{
+    border-top: 1px solid black;
+    bottom: 0;
+}
+.total{
+    width: 30vw;
+    border-collapse: collapse;
+    border-style: none;
+}
+.confirm-btn{
+    padding: 10px;
+    border-radius: 2px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    
+}
+.container-receipt {
+    display: flex;
+    flex-direction: column;
+
+}
+.wrap-receipt{
+    display: flex;
+    justify-content: center;
+
+}
+.receipt {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background: white;
+    padding: 10px;
+    flex-direction: column;
+}
+.receipt table{
+    width: 40vw;
+}
+.receipt table th,.receipt table td{
+    border: none;
+}
+
+.opsi{
+    display: flex;
+    justify-content: center;
+}
+.opsi a{
+    margin-right:10px ;
+    margin-left: 10px;
+}
