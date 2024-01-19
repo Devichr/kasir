@@ -132,4 +132,35 @@
         }
     }
 
+    function additem($namaproduk, $hargaproduk, $stok, $file_name){
+        $conn = connect();
+        $query = "INSERT INTO produk(nama_produk, harga_produk, stok_produk , gambar) VALUES('$namaproduk','$hargaproduk','$stok','$file_name')";
+        $result = mysqli_query($conn,$query);
+        return $result;
+    }
+
+    function deleteproduk(){
+        $conn = connect();
+        $id = $_GET["id"];
+        $query = "DELETE FROM produk WHERE id_produk=$id ";
+        $result = mysqli_query($conn, $query);
+        return $result;
+    }
+
+    function findproduk(){
+        $id = $_GET['id'];
+        $conn = connect();
+        $query = "SELECT * FROM produk WHERE id_produk='$id'";
+        $result = mysqli_query($conn, $query);
+        return $result;
+    }
+
+    function updateproduk($idproduk, $namaproduk, $hargaproduk, $stok, $file_name){
+        $conn = connect();
+        $id = $_GET['id'];
+        $query = "UPDATE produk set nama_produk='$namaproduk', harga_produk='$hargaproduk', stok_produk='$stok', gambar='$file_name' WHERE id_produk = '$id'";
+        $result = mysqli_query($conn, $query);
+        return $result;
+    }
+
 ?>

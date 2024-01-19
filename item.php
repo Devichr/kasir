@@ -19,6 +19,13 @@ include __DIR__ .'/./function/functions.php';
 $connect = connect();
 $show = showprod();
 
+        if (isset($_GET['act'])) {
+            $act = $_GET['act'];
+            if ($act == "delete") {
+                $del = deleteproduk();
+                header('Location:item.php');
+            }
+        }
     ?>
 <div class="top-section">
 <button class="toggle" onclick="toggle()">=</button>
@@ -35,3 +42,35 @@ $show = showprod();
     <hr class="nav-separator">
 </ul>
 </nav>
+<div class="cover"></div>
+<div class="item-section">
+    <a href="add-item.php" class="add-btn">Add New</a>
+    <div class="itemlist">
+        <table style="border-collapse:collapse; width:98vw; margin-top:10px;">
+            <tr>
+                <th>No</th>
+                <th>Gambar</th>
+                <th>Nama</th>
+                <th>Stok</th>
+                <th>Harga</th>
+                <th>Opsi</th>
+            </tr>
+            <?php
+            $no=1;
+            while ($data = mysqli_fetch_assoc($show)) {
+                ?>
+            <tr>
+                <td><?php echo $no++ ?></td>
+                <td><img src="asset/<?php echo $data['gambar'] ?>" alt="" class="product-img"></td>
+                <td><?php echo $data['nama_produk'] ?></td>
+                <td><?php echo $data['stok_produk'] ?></td>
+                <td><?php echo $data['harga_produk'] ?></td>
+                <td>
+                    <a href="update-item.php?id=<?php echo $data['id_produk'] ?>">Update</a>
+                    <a href="item.php?act=delete&amp;id=<?php echo $data['id_produk'] ?>">Delete</a>
+                </td>
+            </tr>
+            <?php }?>
+        </table>
+    </div>
+</div>
