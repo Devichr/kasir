@@ -219,3 +219,14 @@
        display: flex;
        flex-direction: column;
    }
+
+a.option-btn {
+    color: white;
+    background: black;
+    padding: 7px;
+    border-radius: 7px;
+}
+a.option-btn:hover{
+   color:black;
+   background:lightgrey;
+}

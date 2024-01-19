@@ -64,10 +64,10 @@ $show = showprod();
                 <td><img src="asset/<?php echo $data['gambar'] ?>" alt="" class="product-img"></td>
                 <td><?php echo $data['nama_produk'] ?></td>
                 <td><?php echo $data['stok_produk'] ?></td>
-                <td><?php echo $data['harga_produk'] ?></td>
+                <td> Rp<?php echo number_format($data['harga_produk']) ?></td>
                 <td>
-                    <a href="update-item.php?id=<?php echo $data['id_produk'] ?>">Update</a>
-                    <a href="item.php?act=delete&amp;id=<?php echo $data['id_produk'] ?>">Delete</a>
+                    <a class="option-btn" href="update-item.php?id=<?php echo $data['id_produk'] ?>">Update</a>
+                    <a class="option-btn" href="item.php?act=delete&amp;id=<?php echo $data['id_produk'] ?>">Delete</a>
                 </td>
             </tr>
             <?php }?>
