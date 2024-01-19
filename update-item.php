@@ -23,7 +23,7 @@ if (isset($_POST['Update'])) {
         $updateitem = updateproduk($idproduk, $namaproduk, $hargaproduk, $stok, $file_name);
         header ("location:item.php");
     }else if (in_array($extension, $allowed) === true) {
-            if ($size < 5120) {
+            if ($size < 5120000) {
                 $file_name = uniqid(). '.'. $extension;
                 $file_path = 'asset/'. $file_name;
                 move_uploaded_file($tmp, $file_path);

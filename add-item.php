@@ -18,12 +18,12 @@ if (isset($_POST['add'])) {
     $tmp = $_FILES['gambar_produk']['tmp_name'];
 
     if (in_array($extension, $allowed) === true) {
-        if ($size < 5120) {
+        if ($size < 5120000) {
             $file_name = uniqid(). '.'. $extension;
             $file_path = 'asset/'. $file_name;
             move_uploaded_file($tmp, $file_path);
             $additem = additem($namaproduk, $hargaproduk, $stok, $file_name);
-            header ("location:index.php");
+            header ("location:item.php");
         } else {
             echo "File size is too big";
         }

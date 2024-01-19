@@ -36,9 +36,7 @@ $show = showprod();
     <hr class="nav-separator">
     <li><a href="index.php">Sales</a></li>
     <hr class="nav-separator">
-    <li><a href="receive.php">Receive</a></li>
-    <hr class="nav-separator">
-    <li><a href="item.php">Stock Opname</a></li>
+    <li><a href="item.php">Item List</a></li>
     <hr class="nav-separator">
 </ul>
 </nav>

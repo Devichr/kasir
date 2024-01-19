@@ -142,6 +142,7 @@
     function deleteproduk(){
         $conn = connect();
         $id = $_GET["id"];
+        $sql = "SELECT * FROM produk WHERE id_produk=$id ";
         $query = "DELETE FROM produk WHERE id_produk=$id ";
         $result = mysqli_query($conn, $query);
         return $result;
