@@ -24,7 +24,7 @@
         <p class="product-detail">Stok : <?php echo  $data['stok_produk'] ?></p>
         <p class="product-detail">Rp <?php echo number_format($data['harga_produk']) ?></p>
         <button class="add">  <a href="proses.php?act=add&amp;id=<?php echo $data['id_produk'] ?>" class="add" name="add">Add</a></button>  
-        <button class="add">  <a href="detail.php?id=<?php echo $data['id_produk'] ?>" class="add" name="detail">Detail</a></button>  
+        <button class="add">  <a href="index.php?page=detail&amp;id=<?php echo $data['id_produk'] ?>" class="add" name="detail">Detail</a></button>  
     </div>
 <?php }?>
 </div>

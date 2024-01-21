@@ -1,10 +1,4 @@
 <?php 
-        if (!isset($_SESSION)) {
-            session_start();
-        }
-        include __DIR__ .'/./function/functions.php';
-
-$connect = connect();
 $find = findproduk();
 ?>
 <!DOCTYPE html>
@@ -28,7 +22,9 @@ $find = findproduk();
         <p class="stok-detail">Stok : <?php echo  $data['stok_produk'] ?></p>
         <p class="price-detail">Rp <?php echo number_format($data['harga_produk']) ?></p>
         <p class="detail-desc"><?php echo $data['deskripsi']?></p>
-        <button class="add">  <a href="proses.php?act=add&amp;id=<?php echo $data['id_produk'] ?>" class="add" name="add">Add</a></button>  
+
+        <span>        <button class="add">  <a href="index.php" class="add" name="back">Back</a></button>  
+       <button class="add">  <a href="proses.php?act=add&amp;id=<?php echo $data['id_produk'] ?>" class="add" name="add">Add</a></button>  </span>
     </div>
 <?php }?>
 </div>
