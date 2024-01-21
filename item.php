@@ -14,11 +14,6 @@
 </head>
 <body>
     <?php 
-include __DIR__ .'/./function/functions.php';
-
-$connect = connect();
-$show = showprod();
-
         if (isset($_GET['act'])) {
             $act = $_GET['act'];
             if ($act == "delete") {
@@ -27,20 +22,6 @@ $show = showprod();
             }
         }
     ?>
-<div class="top-section">
-<button class="toggle" onclick="toggle()">=</button>
-<h3>DEVSTORE</h3>
-</div>
-<nav id="nav">
-<ul>
-    <hr class="nav-separator">
-    <li><a href="index.php">Sales</a></li>
-    <hr class="nav-separator">
-    <li><a href="item.php">Item List</a></li>
-    <hr class="nav-separator">
-</ul>
-</nav>
-<div class="cover"></div>
 <div class="item-section">
     <a href="add-item.php" class="add-btn">Add New</a>
     <div class="itemlist">

@@ -163,5 +163,4 @@
         $result = mysqli_query($conn, $query);
         return $result;
     }
-
 ?>

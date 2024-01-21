@@ -8,17 +8,11 @@
        color: black;
    }
    .top-section{
+       display: flex;
        background-color: white;
        height: 8vh;
        box-shadow: 0 1px 2px 2px grey;
-       position: relative;
-   }
-   .top-section h3{
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       padding: 10px;
-       font-family: sans-serif;
+       justify-content: space-between;
    }
    
    .top-section .cart-icon{
@@ -229,4 +223,29 @@ a.option-btn {
 a.option-btn:hover{
    color:black;
    background:lightgrey;
+}
+
+h4 {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+.app-name {
+    display: flex;
+    justify-content: center;
+    width: -webkit-fill-available;
+    align-content: center;
+    padding: 5px;
+}
+
+img.product-img-detail {
+    width: 40%;
+    display: flex;
+}
+
+.detail-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
